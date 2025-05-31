@@ -8,7 +8,7 @@ size = comm.Get_size()
 
 # Rank 0 membaca dan membagi data
 if rank == 0:
-    df = pd.read_csv('tubesPempar/dataset/filmtv_movies.csv', sep=',')
+    df = pd.read_csv('dataset/filmtv_movies.csv', sep=',')
     data_split = np.array_split(df, size)
 else:
     data_split = None
